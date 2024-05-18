@@ -1,7 +1,7 @@
 # PrismJs Containerized
 Containerized PrismJS which you can call using HTTP to get colorized syntax back.
 
-![Test](https://github.com/sikora507/PrismJsContainerized/actions/workflows/test.yaml/badge.svg)
+![Test](https://github.com/sikora507/PrismJsContainerized/actions/workflows/test-publish.yaml/badge.svg)
 
 Works excellent with code plugin for TinyMCE, where the language is set on `<pre>` tag instead of `<code>` that's inside it.
 
