@@ -5,7 +5,9 @@ Containerized PrismJS which you can call using HTTP to get colorized syntax back
 
 Works excellent with code plugin for TinyMCE, where the language is set on `<pre>` tag instead of `<code>` that's inside it.
 
-By calling http endpoint from your backend service you get colorized syntax back that you can store in your database directly without including prismJs on your website. This will elimimate the delay between page load and colorized syntax appear.
+Only remember to have your prismjs.css file included on your website.
+
+By calling `POST /highlight` (text/html) endpoint from your backend service you get colorized syntax back that you can store in your database directly without including prismJs on your website. This will elimimate the delay between page load and colorized syntax appear.
 
 Build docker image example:
 ```
@@ -27,5 +29,3 @@ Output from the /highlight endpoint:
 ```html
 <pre class="language-csharp"><code class="language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span> <span class="token punctuation">{</span> <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">Main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> System<span class="token punctuation">.</span>Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span></code></pre>
 ```
-
-Remember to have your prismjs.css file included on your website.
