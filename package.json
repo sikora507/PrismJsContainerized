@@ -2,13 +2,21 @@
   "name": "prismjs-containerized",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "keywords": [],
   "author": "Tomasz Sikora",
   "license": "MIT",
+  "scripts": {
+    "test": "mocha test.js"
+  },
   "dependencies": {
     "express": "^4.18.2",
     "jsdom": "^24.0.0",
     "prismjs": "^1.29.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.4.0",
+    "mocha": "^10.4.0"
   }
 }

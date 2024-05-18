@@ -14,7 +14,6 @@ app.use(express.text({ type: 'text/html' }));
 app.post('/highlight', (req, res) => {
     const { document } = (new JSDOM(req.body)).window;
     const preElements = document.querySelectorAll('pre[class*="language-"]');
-
     preElements.forEach((pre) => {
         // Extract the class name for language identification
         const languageClass = Array.from(pre.classList).find(className => className.startsWith('language-'));
@@ -47,7 +46,7 @@ app.post('/highlight', (req, res) => {
 });
 
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
     console.log(`Prism microservice running at http://localhost:${port}`);
 });
 
@@ -63,3 +62,5 @@ const shutdown = (signal) => {
 
 process.on('SIGINT', () => shutdown('SIGINT'));
 process.on('SIGTERM', () => shutdown('SIGTERM'));
+
+module.exports = server;
